@@ -101,4 +101,4 @@ const BigChartsBox = () => {
   )
 }
 
-export default BigChartsBox
+export { BigChartsBox }
