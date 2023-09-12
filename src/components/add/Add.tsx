@@ -13,6 +13,7 @@ const Add = (props: Props) => {
 
     //add user to the db
     console.log(e, " has been added to the store")
+    props.setOpen(false)
   }
   return (
     <div className="add">
