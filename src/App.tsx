@@ -6,6 +6,7 @@ import { Products } from "./pages/products/Products"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import { Footer } from "./components/footer/Footer"
 import "./styles/global.scss"
+import { ErrorPage } from "./components/error/ErrorPage"
 
 function App() {
   // if we have another page that doesn't needs to be display the navbar and other components
@@ -44,7 +45,15 @@ function App() {
           path: "/products",
           element: <Products />,
         },
+        {
+          path: "*",
+          element: <ErrorPage />,
+        },
       ],
+    },
+    {
+      path: "*",
+      element: <ErrorPage />,
     },
   ])
 
